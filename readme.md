@@ -38,4 +38,4 @@ Think of each paper as a node in a graph. We encode the distance between two nod
 We then find a traveling salesman path across all papers in the group that touches each paper once while minimizing the total distance.
 
 ## Who do I blame for this?
-By Michael Bernstein (Stanford University), June 2019, originally for UIST 2019. Thanks to Adam Finkelstein (Princeton) and David Karger (MIT) for advice.
+By Michael Bernstein (Stanford University), June 2019, originally for UIST 2019. Thanks to Adam Finkelstein (Princeton) and David Karger (MIT) for advice. Traveling salesman approach drawn from HepCat used by SIGGRAPH.
