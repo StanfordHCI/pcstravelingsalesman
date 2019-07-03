@@ -21,7 +21,7 @@ OUTPUT_CSV = 'uist19a_travelingsalesman_order.csv'
 # Bidding CSVs from PCS: this is the only CSV that contains conflict information in PCS, so we use it.
 # This may be a list of CSVs if needed, since one of the ACs may be conflicted with a paper
 # and that one won't show up in their CSV. This just merges all the CSVs in the list.
-BIDDING_CSVS = ['uist19a_committee_bidding-msb.csv', 'uist19a_committee_bidding-reinecke.csv', 'uist19a_committee_bidding-andrewhead.csv']
+BIDDING_CSVS = ['uist19a_committee_bidding.csv']
 # Submission CSV: we use this as an index of all the papers and their current overall scores
 SUBMISSION_CSV = 'uist19a_submission.csv'
 
@@ -122,7 +122,8 @@ def split_into_groups(tsp_result, conflicts):
 def create_subgroup(subgroup, conflicts):
     group_conflicts = set()
     for subgroup_paper in subgroup:
-        group_conflicts.update(conflicts[subgroup_paper])
+        if subgroup_paper in conflicts:
+            group_conflicts.update(conflicts[subgroup_paper])
     return {
         'papers': subgroup,
         'conflicts': group_conflicts
