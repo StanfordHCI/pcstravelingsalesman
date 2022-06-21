@@ -1,5 +1,5 @@
 more-itertools==7.1.0
-numpy==1.16.4
+numpy==1.22.0
 pandas==0.24.2
 pprint==0.1
 PuLP==1.6.10
